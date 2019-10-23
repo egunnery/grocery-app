@@ -4,7 +4,7 @@ require 'pg'
 describe Grocery_List do
   describe '.all' do
     it 'returns a list of items' do
-      connection = PG.connect(dbname: 'Grocery_app_test')
+      connection = PG.connect(dbname: 'grocery_app_test')
 
       grocery_list = Grocery_List.create(item: "Test")
       Grocery_List.create(item: "Testing testing 1 2 1 2")
