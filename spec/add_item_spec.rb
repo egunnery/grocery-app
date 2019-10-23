@@ -8,8 +8,9 @@ describe Grocery_List do
       connection.exec("TRUNCATE grocery_list;")
 
       grocery_list = Grocery_List.add(item: 'onion', category: 'vegetables')
+      grocery_list = Grocery_List.add(item: 'aubergine', category: 'vegetables')
       expect(grocery_list).to be_a Grocery_List
-      expect(grocery_list.item).to eq 'onion'
+      expect(grocery_list.item).to eq 'aubergine'
       expect(grocery_list.category).to eq 'vegetables'
     end
   end
