@@ -6,7 +6,7 @@ describe Grocery_List do
     it 'returns a list of items' do
       connection = PG.connect(dbname: 'grocery_app_test')
 
-      grocery_list = Grocery_List.add(item: "carrots", category: "vegetables")
+      Grocery_List.add(item: "carrots", category: "vegetables")
       Grocery_List.add(item: "brocolli", category: "vegetables")
       Grocery_List.add(item: "Guinness", category: "alcohol")
       Grocery_List.add(item: "toilet roll", category: "toiletries")

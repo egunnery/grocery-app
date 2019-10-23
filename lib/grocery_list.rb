@@ -14,7 +14,7 @@ attr_reader :item, :category
     else
       connection = PG.connect(dbname: 'grocery_app')
     end
-    result = connection.exec("SELECT * FROM grocery_list ORDER BY ID DESC")
+    result = connection.exec("SELECT * FROM grocery_list ORDER BY ID ASC")
     result.map do |grocery_list|
       test = Grocery_List.new(item: grocery_list['item'], category: grocery_list['category'])
     end
@@ -28,11 +28,12 @@ attr_reader :item, :category
       connection = PG.connect(dbname: 'grocery_app')
     end
 
-    result = connection.exec("INSERT INTO grocery_list (item, category) VALUES('#{item}', '#{category}') RETURNING item")
+    result = connection.exec("INSERT INTO grocery_list (item, category) VALUES('#{item}', '#{category}') RETURNING item, category")
     Grocery_List.new(item: result[0]['item'], category: result[0]['category'])
   end
 
-  def self.remove(item:)
+
+  def self.remove(item:, category:)
 
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'grocery_app_test')
@@ -40,6 +41,7 @@ attr_reader :item, :category
       connection = PG.connect(dbname: 'grocery_app')
     end
 
-    connection.exec("DELETE FROM grocery_list WHERE item = #{item}")
-  end 
+    connection.exec("DELETE FROM grocery_list WHERE (item, category) = ('#{item}', '#{category}')")
+
+  end
 end
