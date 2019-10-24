@@ -14,9 +14,10 @@ class ListManager < Sinatra::Base
     redirect '/list'
   end
 
-  reset '/list/reset' do
+  post '/list/reset' do
     Grocery_List.reset
     redirect '/list'
+
 end
 
 end
