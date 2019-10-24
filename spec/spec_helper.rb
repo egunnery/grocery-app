@@ -28,3 +28,20 @@ end
 #     puts "\e[33mTry it now! Just run: rubocop\e[0m"
 #   end
 # end
+
+
+# <ul>
+#   <h1>Test </h1>
+#   <% @items.each do |item| %>
+#     <li class="grocery_list" id="item-<%= grocery_list.item %>">
+#       <a>
+#         <%= grocery_list.item %>
+#         <%= grocery_list.category %>
+#       </a>
+#       <form action="/list/<%= grocery_list.item %>" method="post">
+#         <input type='hidden' name='_method' value='DELETE'/>
+#         <input type="submit" value="Delete" />
+#       </form>
+#     </li>
+#   <% end %>
+# </ul>
