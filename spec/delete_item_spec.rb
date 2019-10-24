@@ -11,7 +11,8 @@ describe Grocery_List do
 
 
       grocery_list = Grocery_List.remove(item:'onion', category: 'vegetables')
-      expect(grocery_list).to eq nil
+      result2 = connection.exec("SELECT * FROM grocery_list ORDER BY ID ASC")
+      expect(result2[0]['item']).to eq 'aubergine'
     end
   end
 end

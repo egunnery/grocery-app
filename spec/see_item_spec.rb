@@ -13,9 +13,9 @@ describe Grocery_List do
 
       grocery_list = Grocery_List.all?
 
-      expect(grocery_list.length).to eq 4
+      expect(grocery_list.length).to eq 5
       expect(grocery_list.first).to be_a Grocery_List
-      expect(grocery_list.first.item).to eq 'carrots'
+      expect(grocery_list.first.item).to eq 'aubergine'
       expect(grocery_list.first.category).to eq 'vegetables'
     end
   end
