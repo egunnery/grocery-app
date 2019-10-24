@@ -40,11 +40,68 @@ body {
 </body>
 Your list
 <ul>
-  
- <% @items.each do |items| %>
 
-   <li><%= items.item + " " + items.category %></li>
- <% end %>
+  <table>
+
+    <th>Fruit & Veg</th>
+      <%  @items.each do |item| %>
+        <tr>
+        <% if item.category == 'Fruit & Veg' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+      <th>Meat & Fish</th>
+      <%  @items.each do |item| %>
+        <tr>
+         <% if item.category == 'Meat & Fish' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+      <th>Drinks</th>
+      <%  @items.each do |item| %>
+        <tr>
+         <% if item.category == 'Drinks' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+      <th>Dairy</th>
+      <%  @items.each do |item| %>
+        <tr>
+         <% if item.category == 'Dairy' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+      <th>Toiletries</th>
+      <%  @items.each do |item| %>
+        <tr>
+        <% if item.category == 'Toiletries' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+      <th>Cleaning Supplies</th>
+      <%  @items.each do |item| %>
+        <tr>
+        <% if item.category == 'Cleaning Supplies' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+      <th>Alcohol</th>
+      <%  @items.each do |item| %>
+        <tr>
+        <% if item.category == 'Alcohol' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+      <th>Misc</th>
+      <%  @items.each do |item| %>
+        <tr>
+        <% if item.category == 'Misc' %> <td><%= item.item %></td> <% end %>
+        </tr>
+      <% end %>
+
+</table>
+
+
 </ul>
 <form action="/list" method="post">
  <input type="text" name="item">
@@ -59,7 +116,7 @@ Your list
  <option value="Dairy">Dairy</option>
  <option value="Cleaning Supplies">Cleaning Supplies</option>
  <option value="Drinks">Drinks</option>
- <option value="Mics">Misc</option>
+ <option value="Misc">Misc</option>
 
 </select>
 
