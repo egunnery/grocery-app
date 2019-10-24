@@ -26,6 +26,13 @@ body {
  transform: translate(-50%, -50%);
  color: Black;
 }
+table {
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid black;
+  padding: 1em;
+}
 </style>
 </head>
 <body>
@@ -38,11 +45,9 @@ body {
 <p>Thank you for chosing to use our website. We encourage you to use this on a daily basis.</p>
 <p>Please see below for the list you have made.</p>
 </body>
-Your list
+<h1>Your list</h1>
 <ul>
-
   <table>
-
     <th>Fruit & Veg</th>
       <%  @items.each do |item| %>
         <tr>
@@ -121,5 +126,6 @@ Your list
 </select>
 
 <input type="submit" value="submit">
+
 
  </form>
