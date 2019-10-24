@@ -13,4 +13,10 @@ class ListManager < Sinatra::Base
     Grocery_List.add(item: params['item'], category: params['category']).to_s
     redirect '/list'
   end
+
+  reset '/list/reset' do
+    Grocery_List.reset
+    redirect '/list'
+end
+
 end

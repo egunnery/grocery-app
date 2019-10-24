@@ -44,4 +44,14 @@ attr_reader :item, :category
     connection.exec("DELETE FROM grocery_list WHERE (item, category) = ('#{item}', '#{category}')")
 
   end
+
+  def self.reset
+
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'grocery_app_test')
+    else
+      connection = PG.connect(dbname: 'grocery_app')
+    end
+    connection.exec("TRUNCATE grocery_list")
+  end
 end
