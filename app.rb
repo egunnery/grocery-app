@@ -18,6 +18,8 @@ class ListManager < Sinatra::Base
     Grocery_List.reset
     redirect '/list'
 
+  # testing push
+
 end
 
 end
