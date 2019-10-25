@@ -41,6 +41,28 @@ td, th {
 <div>
 
 <h1>Your list</h1>
+
+<form action="/list" method="post">
+ <input type="text" maxlength="15" name="item">
+
+<select name="category" required>
+ <option value="Fruit & Veg"> Fruit & Veg</option>
+ <option value="Meat & Fish">Meat & Fish</option>
+ <option value="Drinks">Drinks</option>
+ <option value="Dairy">Dairy</option>
+ <option value="Toiletries">Toiletries</option>
+ <option value="Cleaning Supplies">Cleaning Supplies</option>
+ <option value="Alcohol">Alcohol</option>
+ <option value="Misc">Misc</option>
+
+</select>
+
+<input type="submit" value="Submit">
+</form>
+
+<form action="/list/reset" method="post">
+  <input type="submit" value="Reset" />
+</form>
 <ul>
 
 <table bgcolor="#F0FFF0">
@@ -123,24 +145,4 @@ td, th {
       <% end %>
 </table>
 
-  <form action="/list" method="post">
-   <input type="text" maxlength="15" name="item">
-
-  <select name="category" required>
-   <option value="Fruit & Veg"> Fruit & Veg</option>
-   <option value="Meat & Fish">Meat & Fish</option>
-   <option value="Drinks">Drinks</option>
-   <option value="Dairy">Dairy</option>
-   <option value="Toiletries">Toiletries</option>
-   <option value="Cleaning Supplies">Cleaning Supplies</option>
-   <option value="Alcohol">Alcohol</option>
-   <option value="Misc">Misc</option>
-
-  </select>
-
-  <input type="submit" value="Submit">
-  </form>
-
-  <form action="/list/reset" method="post">
-    <input type="submit" value="Reset" />
-  </form>
+  
