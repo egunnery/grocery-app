@@ -17,6 +17,7 @@ body {
 
 table {
   border-collapse: collapse; float: left;
+
 }
 td, th {
   border: 1px solid black;
@@ -42,83 +43,83 @@ td, th {
 <h1>Your list</h1>
 <ul>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
     <th>Fruit & Veg</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-        <% if item.category == 'Fruit & Veg' %><tr><td><%= item.item %></td></tr><% end %>
+        <% if item.category == 'Fruit & Veg' %><tr><td><%= item.item %><input type="checkbox"></td></tr><% end %>
       <% end %>
 </table>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
     <th>Meat & Fish</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-         <% if item.category == 'Meat & Fish' %><tr> <td><%= item.item %></td> </tr> <% end %>
+         <% if item.category == 'Meat & Fish' %><tr> <td><%= item.item %><input type="checkbox"></td> </tr> <% end %>
       <% end %>
 </table>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
     <th>Drinks</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-         <% if item.category == 'Drinks' %> <tr><td><%= item.item %></td></tr><% end %>
+         <% if item.category == 'Drinks' %> <tr><td><%= item.item %><input type="checkbox"></td></tr><% end %>
       <% end %>
 </table>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
     <th>Dairy</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-         <% if item.category == 'Dairy' %> <tr><td><%= item.item %></td> </tr><% end %>
+         <% if item.category == 'Dairy' %> <tr><td><%= item.item %><input type="checkbox"></td> </tr><% end %>
       <% end %>
 </table>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
     <th>Toiletries</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-        <% if item.category == 'Toiletries' %><tr><td><%= item.item %></td></tr><% end %>
+        <% if item.category == 'Toiletries' %><tr><td><%= item.item %><input type="checkbox"></td></tr><% end %>
       <% end %>
 </table>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
     <th>Cleaning Supplies</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-        <% if item.category == 'Cleaning Supplies' %> <tr><td><%= item.item %></td></tr><% end %>
+        <% if item.category == 'Cleaning Supplies' %> <tr><td><%= item.item %><input type="checkbox"></td></tr><% end %>
       <% end %>
 </table>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
     <th>Alcohol</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-        <% if item.category == 'Alcohol' %> <tr><td><%= item.item %></td></tr><% end %>
+        <% if item.category == 'Alcohol' %> <tr><td><%= item.item %><input type="checkbox"></td></tr><% end %>
       <% end %>
 </table>
 
-<table>
+<table bgcolor="#F0FFF0">
 <tr>
   <th>Misc</th>
 </tr>
 <tr>
       <%  @items.each do |item| %>
-        <% if item.category == 'Misc' %> <tr><td><%= item.item %></td> </tr><% end %>
+        <% if item.category == 'Misc' %> <tr><td><%= item.item %><input type="checkbox"></td> </tr><% end %>
       <% end %>
 </table>
 
